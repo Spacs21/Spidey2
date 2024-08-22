@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Shadows+Into+Light&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 700;
+    font-style: normal
+}
+.container{
+    background: url("/spiderman\ 3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .spidey{
+        position: relative;
+        animation-duration: 5s;
+        img{
+            position: fixed;
+            width: 100px;
+            left: 150px;
+            top: -55px;
+            animation: slide-in 3s ease-in-out infinite;
+        }
+    }
+    .spidey2{
+        position: relative;
+        img{
+            position: fixed;
+            width: 100px;
+            right: 150px;
+            top: -5px;
+            animation: slide-in 3s ease-in-out infinite;
+            animation-delay: .5s;
+            transform: translateY(-100%);
+        }
+    }
+    h2{
+        color: white;
+        font-size: 45px;
+        animation: paydoBulish 3s ease-in-out;
+    }
+    p{
+        color: white;
+        font-size: 25px;
+    }
+    &__button{
+        button{
+            padding: 12px 30px;
+            border-radius: 15px;
+            border: none;
+            margin-top: 10px;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            border: 1px solid red;
+            transition: calc(.5s);
+        }
+        button:hover{
+            background-color: black;
+            color: red;
+            border: 1px solid white;
+        }
+    }
+}
+@keyframes paydoBulish {
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    50%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(-100%);
+    }
+    50% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
